@@ -1,0 +1,12 @@
+{{include('inc/header.html')}}
+
+<h1>
+{{msg}}
+</h1>
+
+<p>Aqui você também pode mudar a sua senha</p>
+
+<form action="altera.php?{{token}}" method="GET">
+    <button type="submit">Trocar Senha</button>
+</form>
+{{include('inc/footer.html')}}

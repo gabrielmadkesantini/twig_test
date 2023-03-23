@@ -1,0 +1,14 @@
+{{include('inc/header.html')}}
+
+<div>
+    <form action="recuperar_senha.php" method="POST">
+        <div>
+            <input type="text" name="username" placeholder="Digite seu nome">
+            <input type="submit" value="Recuperar">
+        </div>
+    </form>
+</div>
+{% if msg %}
+{{msg}}
+{% endif %}
+{{include('inc/footer.html')}}

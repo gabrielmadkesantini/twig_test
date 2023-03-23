@@ -1,0 +1,12 @@
+{{include('inc/header.html')}}
+<div>
+    Você realmente que a pagar o usuário {{nome}}
+    <form method="POST" action="usuario_apagar.php?id={{id}}">
+        <button type="submit">Sim</button>
+    </form>
+    <form action="list_users.php">
+    <button type="submit">Cancelar</button>
+</form>
+</div>
+
+{{include('inc/footer.html')}}

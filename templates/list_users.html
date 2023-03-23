@@ -1,0 +1,19 @@
+{{ include('inc/header.html') }}
+<table border="1">
+    <tr>
+        <th>Usuário</th>
+        <th>Admin</th>
+        <th>Apagar</th>
+        <th>Editar</th>
+    </tr>
+
+    {% for user in users %}
+    <tr>
+        <td>{{user.username}}</td>
+        <td>{{user.admin}}</td>
+        <td><a href="usuario_update.php?id={{user.id}}"><button>Apagar</button></a></td>
+        <td><a href="usuario_apagar.php?id={{user.id}}"><button>Editar</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+{{ include('inc/footer.html') }}
