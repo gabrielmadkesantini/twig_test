@@ -1,14 +1,12 @@
 <?php
-require('pdo.inc.php');
+require('models/Model.php');
+require('models/usuario.php');
 require('testetwig.php');
-
-$sql = $pdo->prepare('SELECT * FROM USUARIOS WHERE ATIVO != 0');
-
-$sql->execute();
-
-$result_select = $sql->fetchAll(PDO::FETCH_OBJ);
+require('models/Models.php');
+require('models/Usuario.php');
 
 $templates = $twig->load('list_users.html');
+$user = new Usuario();
 
 echo $templates->render([
 "users"=> $result_select
