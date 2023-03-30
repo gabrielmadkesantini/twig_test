@@ -2,8 +2,8 @@
     Usuário ou senha inválidos! 😭
 {% elseif erro == 2 %}
     Você está tentando acessar uma página restrita, safadinho! 🙄 
-{% elseif erro %}
-{{erro}}
+{% elseif erro == 3 %}
+ Sua senha foi alterada com sucesso 😊👌
 {% endif %}
 
 <form action="login_verifica.php" method="POST">

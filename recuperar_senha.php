@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($response->rowCount()) {
         $user = $response->fetch(PDO::FETCH_ASSOC);
         $token = uniqid(null, true) . bin2hex(random_bytes(16));
-        var_dump($user);
+         
         $update = $pdo->prepare('UPDATE usuarios SET recupera_token = :token WHERE id=:id_usr');
         $update->execute([
             ':token' => $token,
@@ -24,9 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'msg' => $msg,
             'token'=>$token
         ]);
+        die;
     }else{
             $msg = 'MEU DEUS CARA NEM TEU NOME TU SABE KKKKKKKKKKK';
     }
+   
 } 
 
 echo $twig->render('recupera_senha.html', [

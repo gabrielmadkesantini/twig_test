@@ -6,7 +6,6 @@
 
 <p>Aqui você também pode mudar a sua senha</p>
 
-<form action="altera.php?{{token}}" method="GET">
-    <button type="submit">Trocar Senha</button>
-</form>
-{{include('inc/footer.html')}}
+<a href="altera_senha.php?token={{token}}">trocar senha</a>
+
+{{include('inc/footer.html')}}  
